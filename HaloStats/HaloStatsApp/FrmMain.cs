@@ -1,4 +1,5 @@
-﻿using HaloStats.Library;
+﻿using HaloStats.Http;
+using HaloStats.Library;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -32,12 +33,11 @@ namespace HaloStatsApp
             try
             {
                 //sloppy testing here but...
-                Http.HttpREST rest = new Http.HttpREST();
+                HttpREST rest = new HttpREST();
                 //Get Spartan and Emblem...
                 Image spartanImage = Image.FromStream(await rest.GetImage($"profile/h5/profiles/{TxtGamertag.Text}/spartan?size=128"));
                 Image emblemImage = Image.FromStream(await rest.GetImage($"profile/h5/profiles/{TxtGamertag.Text}/emblem?size=128"));
-                PbSpartan.Image = spartanImage;
-                PbEmblem.Image = emblemImage;
+                
 
 
                 //Get player history
@@ -45,6 +45,8 @@ namespace HaloStatsApp
 
 
                 StopProgress();
+                PbSpartan.Image = spartanImage;
+                PbEmblem.Image = emblemImage;
             }
             catch (Exception ex)
             {
@@ -61,6 +63,11 @@ namespace HaloStatsApp
         {
             if (e.KeyChar == '\r')
                 BtnLoad.PerformClick();
+        }
+
+        private void TxtGamertag_TextChanged(object sender, EventArgs e)
+        {
+            BtnLoad.Enabled = !string.IsNullOrWhiteSpace(TxtGamertag.Text) ? true : false;
         }
     }
 }

@@ -39,15 +39,17 @@ namespace HaloStatsApp
             // 
             // TxtGamertag
             // 
-            this.TxtGamertag.Location = new System.Drawing.Point(36, 49);
+            this.TxtGamertag.Location = new System.Drawing.Point(12, 12);
             this.TxtGamertag.Name = "TxtGamertag";
             this.TxtGamertag.Size = new System.Drawing.Size(205, 27);
             this.TxtGamertag.TabIndex = 0;
+            this.TxtGamertag.TextChanged += new System.EventHandler(this.TxtGamertag_TextChanged);
             this.TxtGamertag.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtGamertag_KeyPress);
             // 
             // BtnLoad
             // 
-            this.BtnLoad.Location = new System.Drawing.Point(259, 47);
+            this.BtnLoad.Enabled = false;
+            this.BtnLoad.Location = new System.Drawing.Point(223, 10);
             this.BtnLoad.Name = "BtnLoad";
             this.BtnLoad.Size = new System.Drawing.Size(94, 29);
             this.BtnLoad.TabIndex = 1;
@@ -57,20 +59,20 @@ namespace HaloStatsApp
             // 
             // PbSpartan
             // 
-            this.PbSpartan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PbSpartan.Location = new System.Drawing.Point(36, 180);
+            this.PbSpartan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PbSpartan.Location = new System.Drawing.Point(12, 142);
             this.PbSpartan.Name = "PbSpartan";
-            this.PbSpartan.Size = new System.Drawing.Size(138, 205);
+            this.PbSpartan.Size = new System.Drawing.Size(96, 199);
             this.PbSpartan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbSpartan.TabIndex = 2;
             this.PbSpartan.TabStop = false;
             // 
             // PbEmblem
             // 
-            this.PbEmblem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PbEmblem.Location = new System.Drawing.Point(36, 82);
+            this.PbEmblem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PbEmblem.Location = new System.Drawing.Point(12, 43);
             this.PbEmblem.Name = "PbEmblem";
-            this.PbEmblem.Size = new System.Drawing.Size(138, 92);
+            this.PbEmblem.Size = new System.Drawing.Size(96, 96);
             this.PbEmblem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbEmblem.TabIndex = 3;
             this.PbEmblem.TabStop = false;
@@ -79,7 +81,7 @@ namespace HaloStatsApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 413);
+            this.ClientSize = new System.Drawing.Size(945, 341);
             this.Controls.Add(this.PbEmblem);
             this.Controls.Add(this.PbSpartan);
             this.Controls.Add(this.BtnLoad);

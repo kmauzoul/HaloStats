@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HaloStats.Http\HaloStats.Http.csproj" />
     <ProjectReference Include="..\HaloStats.Library\HaloStats.Library.csproj" />
   </ItemGroup>
 

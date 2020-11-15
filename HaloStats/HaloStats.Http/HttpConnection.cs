@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Net.Http;
 
-namespace HaloStatsApp.Http
+namespace HaloStats.Http
 {
     internal class HttpConnection
     {
         private static HttpClient _httpClient;
 
-        internal static HttpClient HttpClient
+        public static HttpClient HttpClient
         {
             get
             {

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 
-namespace HaloStatsApp.Http
+namespace HaloStats.Http
 {
     /// <summary>
     /// This will be a collection of async REST calls to various end points
     /// Primary Key: 85f2f9f177344b15b17510261707e347
     /// Secondary Key: eadb9e3c2e754194a80dc8ff9d33d967
     /// </summary>
-    internal class HttpREST
+    public class HttpREST
     {
         const string ContentType = "application/json";
 
@@ -25,7 +25,7 @@ namespace HaloStatsApp.Http
             HttpConnection.HttpClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "85f2f9f177344b15b17510261707e347");
         }
 
-        internal async Task<System.IO.Stream> GetImage(string EndPoint)
+        public async Task<System.IO.Stream> GetImage(string EndPoint)
         {
             InitializeClient();
             
@@ -43,7 +43,7 @@ namespace HaloStatsApp.Http
             }
         }
 
-        internal async Task<T> GetItem<T>(string EndPoint)
+        public async Task<T> GetItem<T>(string EndPoint)
         {
             InitializeClient();
 
