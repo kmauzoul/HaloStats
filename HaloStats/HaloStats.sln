@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloStats.Library", "HaloSt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloStats.WPF", "HaloStats.WPF\HaloStats.WPF.csproj", "{8ED356DC-4529-49A2-A4D1-0CB91B782DF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloStats.Http", "HaloStats.Http\HaloStats.Http.csproj", "{3D439E62-CDC6-4C4B-8EF8-8770E2F4E1D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloStats.Net", "HaloStats.Net\HaloStats.Net.csproj", "{3D439E62-CDC6-4C4B-8EF8-8770E2F4E1D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

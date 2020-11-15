@@ -7,8 +7,8 @@
     <ProjectGuid>{3D439E62-CDC6-4C4B-8EF8-8770E2F4E1D8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HaloStats.Http</RootNamespace>
-    <AssemblyName>HaloStats.Http</AssemblyName>
+    <RootNamespace>HaloStats.Net</RootNamespace>
+    <AssemblyName>HaloStats.Net</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
