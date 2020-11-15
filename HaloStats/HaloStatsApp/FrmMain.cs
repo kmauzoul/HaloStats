@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using HaloStats.Library;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace HaloStatsApp
 {
@@ -39,7 +33,17 @@ namespace HaloStatsApp
             {
                 //sloppy testing here but...
                 Http.HttpREST rest = new Http.HttpREST();
-                PbSpartan.Image = Image.FromStream(await rest.GetSpartanImage($"profile/h5/profiles/{TxtGamertag.Text}/spartan?size=128"));
+                //Get Spartan and Emblem...
+                Image spartanImage = Image.FromStream(await rest.GetImage($"profile/h5/profiles/{TxtGamertag.Text}/spartan?size=128"));
+                Image emblemImage = Image.FromStream(await rest.GetImage($"profile/h5/profiles/{TxtGamertag.Text}/emblem?size=128"));
+                PbSpartan.Image = spartanImage;
+                PbEmblem.Image = emblemImage;
+
+
+                //Get player history
+                var history = await rest.GetItem<PlayerMatchHistory>($"stats/h5/players/{TxtGamertag.Text}/matches?modes=Arena&start=0&count=10");
+
+
                 StopProgress();
             }
             catch (Exception ex)

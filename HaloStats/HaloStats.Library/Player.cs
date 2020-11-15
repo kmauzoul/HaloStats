@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HaloStats.Libary
+namespace HaloStats.Library
 {
-    public class Company
+    public class Player
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
+        public string Gamertag { get; set; }
     }
 }

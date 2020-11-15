@@ -4,6 +4,7 @@ using System.Text;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Net.Http.Headers;
+using Newtonsoft.Json;
 
 namespace HaloStatsApp.Http
 {
@@ -24,7 +25,7 @@ namespace HaloStatsApp.Http
             HttpConnection.HttpClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "85f2f9f177344b15b17510261707e347");
         }
 
-        internal async Task<System.IO.Stream> GetSpartanImage(string EndPoint)
+        internal async Task<System.IO.Stream> GetImage(string EndPoint)
         {
             InitializeClient();
             
@@ -33,6 +34,24 @@ namespace HaloStatsApp.Http
                 HttpResponseMessage response = await HttpConnection.HttpClient.GetAsync(EndPoint);
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                     return await response.Content.ReadAsStreamAsync();
+                else
+                    throw new Exception($"{response.StatusCode} - {response.ReasonPhrase}");
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        internal async Task<T> GetItem<T>(string EndPoint)
+        {
+            InitializeClient();
+
+            try
+            {
+                HttpResponseMessage response = await HttpConnection.HttpClient.GetAsync(EndPoint);
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    return JsonConvert.DeserializeObject<T>(await response.Content.ReadAsStringAsync());
                 else
                     throw new Exception($"{response.StatusCode} - {response.ReasonPhrase}");
             }

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloStatsApp", "HaloStatsApp\HaloStatsApp.csproj", "{B5973897-7AC7-4D2C-A58F-F5BC83513CE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloStats.Libary", "HaloStats.Libary\HaloStats.Libary.csproj", "{D089A9C0-A41F-4D11-9CF4-8600361D6888}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloStats.Library", "HaloStats.Library\HaloStats.Library.csproj", "{D089A9C0-A41F-4D11-9CF4-8600361D6888}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
