@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HaloStats.Http\HaloStats.Net.csproj" />
     <ProjectReference Include="..\HaloStats.Library\HaloStats.Library.csproj" />
+    <ProjectReference Include="..\HaloStats.Net\HaloStats.Net.csproj" />
   </ItemGroup>
 
 </Project>

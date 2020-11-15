@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TextBox x:Name="TxtGamertag" HorizontalAlignment="Left" Margin="20,21,0,359" TextWrapping="Wrap" Width="120" AutomationProperties.HelpText="Enter Gamertag..." TextChanged="TxtGamertag_TextChanged"/>
+        <Button x:Name="BtnLoadGamertag" Content="Load" HorizontalAlignment="Left" Margin="157,21,0,0" VerticalAlignment="Top" Width="75" Height="23" IsEnabled="False" Click="BtnLoadGamertag_Click"/>
+        <Border x:Name="BorderSpartanPanel" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="335" Margin="20,66,0,0" VerticalAlignment="Top" Width="120">
+            <StackPanel Margin="0.2,0.2,0.2,0.4">
+                <Image x:Name="ImgEmblem" Height="80" Margin="0,0,0.4,0"/>
+                <Image x:Name="ImgSpartan" Height="255" Margin="0,0,0.4,0"/>
+            </StackPanel>
+        </Border>
+
     </Grid>
 </Window>

@@ -94,5 +94,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HaloStats.Library\HaloStats.Library.csproj">
+      <Project>{d089a9c0-a41f-4d11-9cf4-8600361d6888}</Project>
+      <Name>HaloStats.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HaloStats.Net\HaloStats.Net.csproj">
+      <Project>{3d439e62-cdc6-4c4b-8ef8-8770e2f4e1d8}</Project>
+      <Name>HaloStats.Net</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
